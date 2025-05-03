@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>챗닥터</title>
+  <style>
+    body {
+      background-color: #e5e5e5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    .phone-frame {
+      width: 360px;
+      height: 640px;
+      background-color: #ffffff;
+      border-radius: 40px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .top-bar {
+      background-color: #00bfa5;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    .top-bar img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .chat-area {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .form-area {
+      padding: 15px;
+      background-color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .form-area input,
+    .form-area textarea,
+    .form-area button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+    .form-area button {
+      background-color: #00bfa5;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .response {
+      background-color: #dcf8c6;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone-frame">
+    <div class="top-bar">
+      <img src="의사선생님.png" alt="귀여운 의사 선생님"  style="width: 100px; border-radius: 50%;" />
+    </div>
+    <div class="chat-area">
+      <div id="responseBox">안녕하세요! 어떤 증상이 있으신가요?</div>
+    </div>
+    <form id="chatForm" class="form-area">
+      <input type="text" name="age" placeholder="나이" required />
+      <input type="text" name="gender" placeholder="성별 (남성/여성)" required />
+      <input type="text" name="disease" placeholder="기저질환" />
+      <input type="text" name="surgery" placeholder="수술이력" />
+      <input type="text" name="meds" placeholder="복용약" />
+      <textarea name="symptom" placeholder="증상을 입력해주세요" rows="2" required></textarea>
+      <button type="submit">상담하기</button>
+    </form>
+  </div>
+
+  <script src="test_script.js"></script>
+</body>
+</html>
