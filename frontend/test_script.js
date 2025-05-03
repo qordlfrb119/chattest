@@ -18,7 +18,7 @@ document.getElementById("chatForm").addEventListener("submit", async (e) => {
   };
 
   // 3. 서버에 질문 보내기
-  const res = await fetch("https://chattest.onrender.com/chat", {
+  const res = await fetch("https://chattest-kma0.onrender.com/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
